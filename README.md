@@ -33,7 +33,6 @@ This simulation allows the user to experience the Monty Hall problem and see the
 ### Other
 - `menu/menu.html`: HTML file for the language selection menu, which handles redirection.
 - `menu/menu.css`: CSS file containing styles for the menu.
-- `menu/menu-script.js`: JavaScript file containing the functionality for the menu.
 - `img/`: Directory containing images of the prizes and more (car, goat, flags etc.) used in the game.
 - `Play Yet Another Door Game.bat`: Batch file to play the game on Windows.
 
@@ -41,7 +40,9 @@ This simulation allows the user to experience the Monty Hall problem and see the
 This simulation was created using **HTML**, **CSS**, and **JavaScript**. Feel free to fork this repository and make any modifications or improvements as needed. Pull requests are welcome!
 
 ## Credits
-Images used in the simulation were obtained from [Flaticon](https://www.flaticon.com/).
+- Images and used in the simulation were obtained from [Flaticon](https://www.flaticon.com).
+- SVG images used in the simulation were obtained from [SVGRepo](https://www.svgrepo.com).
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
