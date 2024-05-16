@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yet Another Door Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="body">
+		<header>
+            <h1>Welcome to Yet Another Door Game!</h1>
+        </header>
+        <p class="rule-title">About the Game</p>
+		<table class="rules">
+            <tbody>
+                <tr class="rule-row">
+                    <td class="rule-number">1.</td>
+                    <td class="rule">Behind one of the three doors in the game is a brand new car, and behind the other two are goats.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">2.</td>
+                    <td class="rule">The objective is to choose the door with the car behind it and win the car.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">3.</td>
+                    <td class="rule">Before the contestant's chosen door is opened, the computer reveals one of the other doors behind which there is a goat.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">4.</td>
+                    <td class="rule">At this point, two closed doors remain: the contestant's chosen door and the unchosen door.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">5.</td>
+                    <td class="rule">The contestant is given the option to switch to the other remaining door.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">6.</td>
+                    <td class="rule">The contestant will either stick with their initial choice or switch to the other door.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">7.</td>
+                    <td class="rule">After the contestant's final choice of door is opened, it is revealed whether they have won the car or not.</td>
+                </tr>
+            </tbody>
+        </table>
+            <div id="instructions" class="instructions">
+				<div id="row1" class="row1">Please select a door now</div>
+				<div id="d1">You chose Door 1</div>
+				<div id="d2">You chose Door 2</div>
+				<div id="d3">You chose Door 3</div>
+				<div id="row2" class="row2">
+
+			<p class="spk1">Okay, I'm opening another door with a goat behind it and asking you;</p>
+			<p class="spk2">Do you want to switch your chosen door with the remaining door?</p>
+
+				<div class="buttons">
+					<button id="btn-1">Yes</button>
+					<button id="btn-2">No</button>
+				</div>
+			</div>
+		</div>
+
+		<main class="door-row">
+			<img id="door1" class="door" src="../img/door1.png" alt="door">
+			<img id="door2" class="door" src="../img/door1.png" alt="door">
+			<img id="door3" class="door" src="../img/door1.png" alt="door">
+		</main>
+	</div>
+
+	<div id="switchAndWin" class="result">
+		<p class="reslt">Congratulations!</p>
+		<p>You made the right choice by switching your door!</p>
+		<p>By switching your door, you increased your chance of winning to 66.7%.</p>
+
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">More Info</a></button>
+			<button><a href="index.html">Play Again</a></button>
+		</div>
+	</div>
+
+	<div id="switchAndLose" class="result">
+		<p class="reslt">You Lost!</p>
+		<p>Your chance of winning was 67% if you switched your door, but you still lost.</p>
+		<p>Try your luck again</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">More Info</a></button>
+			<button><a href="index.html">Play Again</a></button>
+		</div>
+	</div>
+	<div id="NoSwitchAndWin" class="result">
+		<p class="reslt">Congratulations!</p>
+		<p>You're very lucky.</p>
+		<p>Your chance of winning was only 33% because you didn't switch your door, but you still won.</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">More Info</a></button>
+			<button><a href="index.html">Play Again</a></button>
+		</div>
+	</div>
+	<div id="NoSwitchAndLose" class="result">
+		<p class="reslt">You Lost!</p>
+		<p>Your chance of winning was only 33% because you didn't switch your door.</p>
+		<p>Try your luck again</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">More Info</a></button>
+			<button><a href="index.html">Play Again</a></button>
+		</div>
+	</div>
+	<script src="app.js" async defer></script>
+</body>
+</html>

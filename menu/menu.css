@@ -1,0 +1,102 @@
+* {
+    user-select: none; /* Kullanıcının herhangi bir içeriği seçmesini engelle */
+    -moz-user-select: none; /* Resmi seçmeyi Firefox'ta devre dışı bırak (isteğe bağlı) */
+    -webkit-user-drag: none; /* Resmi sürüklemeyi WebKit (Chrome/Safari) tarayıcılarında devre dışı bırak (isteğe bağlı) */
+}
+
+body {
+    font-family: 'Bangers', cursive; /* Yazı tipi ailesi */
+    text-align: center; /* Metni ortala */
+    background-color: #363636 ; /* Arka plan rengi */
+    background-size: cover; /* Resmi ekran boyutuna sığacak şekilde ayarla */
+    background-repeat: no-repeat; /* Resmin yalnızca bir kez tekrar edilmesini sağla */
+    background-position: center; /* Resmi dikey ve yatay olarak ortala */
+    overflow: hidden; /* Sayfanın aşağı kaymasını engelle */
+}
+
+h1 {
+    font-size: 4vw; /* Duyarlı font boyutu */
+    margin-bottom: 1.5vh; /* Alt kenar boşluğunu yüzde olarak ayarla */
+    color: whitesmoke; /* Yazı rengi */
+}
+
+h2 {
+    color: whitesmoke; /* Yazı rengi */
+    font-size: 2.5vw; /* Duyarlı font boyutu */
+}
+
+header {
+    height: 15vh; /* Yükseklik */
+    display: flex; /* Öğeleri yatay olarak hizala */
+    justify-content: center; /* Öğeleri yatayda ortala */
+    align-items: center; /* Öğeleri dikeyde ortala */
+    font-size: 2vw; /* Duyarlı font boyutu */
+    text-align: center; /* Metni ortala */
+}
+
+.button-container {
+    margin-top: 1vh; /* Üst kenar boşluğunu yüzde olarak ayarla */
+    text-align: center; /* Butonları ortala */
+}
+
+.button {
+    display: inline-block; /* Blok öğeleri yan yana hizalar */
+    margin: 1vh; /* Buton kenar boşluğunu yüzde olarak ayarla */
+    width: 25vw; /* Buton genişliği */
+    height: 25vw; /* Buton yüksekliği */
+    overflow: hidden; /* İçeriğin sınırlarını belirtilen boyutlarda tut */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    transition: transform 0.5s ease; /* Dönüşüm animasyonu */
+    position: relative; /* Pozisyon */
+    vertical-align: middle; /* Dikey hizalama */
+}
+
+.button img {
+    width: auto; /* Resmi otomatik boyutlandır */
+    height: 100%; /* Yüksekliği yüzdeye ayarla */
+    position: absolute; /* Pozisyon */
+    top: 0; /* Üst kenar boşluğunu ayarla */
+    left: 0; /* Sol kenar boşluğunu ayarla */
+    transform: scale(1); /* Varsayılan boyutta başlat */
+    transition: transform 0.5s ease; /* Dönüşüm animasyonu */
+}
+
+.button:hover img {
+    transform: scale(1.1); /* Üzerine gelindiğinde resmi hafif büyüt */
+}
+
+.button:hover {
+    box-shadow: 0 0 0 2px white; /* Buton etrafına gölge ekle */
+}
+
+.language-container {
+    margin-top: 5vh; /* Üst kenar boşluğunu yüzde olarak ayarla */
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 6vw; /* Küçük ekranlarda font boyutunu ayarla */
+    }
+
+    h2 {
+        font-size: 4vw; /* Küçük ekranlarda font boyutunu ayarla */
+    }
+
+    header {
+        font-size: 4vw; /* Küçük ekranlarda font boyutunu ayarla */
+    }
+
+    .button-container {
+        margin-top: 3vh; /* Küçük ekranlarda buton container boşluğunu ayarla */
+    }
+
+    .button {
+        margin: 2vh; /* Küçük ekranlarda buton kenar boşluğunu ayarla */
+        width: 40vw; /* Küçük ekranlarda buton genişliğini ayarla */
+        height: 40vw; /* Küçük ekranlarda buton yüksekliğini ayarla */
+    }
+
+    .language-container {
+        margin-top: 10vh; /* Küçük ekranlarda language container boşluğunu ayarla */
+    }
+}

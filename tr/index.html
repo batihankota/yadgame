@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yet Another Door Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="body">
+		<header>
+            <h1>Yet Another Door Game'e Hoş Geldin!</h1>
+        </header>
+        <p class="rule-title">Oyun Hakkında</p>
+		<table class="rules">
+            <tbody>
+                <tr class="rule-row">
+                    <td class="rule-number">1.</td>
+                    <td class="rule">Yarışmadaki üç kapıdan birinin arkasında son model bir araba, diğer ikisinin arkasında ise keçi vardır.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">2.</td>
+                    <td class="rule">Amaç, arabanın bulunduğu kapıyı seçmek ve arabayı kazanmaktır.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">3.</td>
+                    <td class="rule">Yarışmacının seçtiği kapı açılmadan önce, bilgisayar arkasında keçi olan bir kapıyı açmaktadır.</td>
+                </tr>
+                <tr class="rule-row">
+                    <td class="rule-number">4.</td>
+                    <td class="rule"> Bu durumda kapalı iki kapı kalmaktadır: Yarışmacının seçtiği kapı ile seçmediği diğer kapı.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">5.</td>
+                    <td class="rule"> Yarışmacıya, kalan kapılar arasında yeni bir seçim yapma hakkı tanınmaktadır.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">6.</td>
+                    <td class="rule"> Yarışmacı ya ilk seçtiği kapı ile devam edecektir ya da fikrini değiştirip diğer kapıyı seçecektir.</td>
+                </tr>
+               <tr class="rule-row">
+                    <td class="rule-number">7.</td>
+                    <td class="rule"> Yarışmacının son tercihi olan kapı açıldıktan sonra arabayı kazanıp kazanamadığı belli olmaktadır.</td>
+                </tr>
+            </tbody>
+        </table>
+            <div id="instructions" class="instructions">
+				<div id="row1" class="row1">Şimdi lütfen bir kapı seç</div>
+				<div id="d1">1.Kapıyı seçtin</div>
+				<div id="d2">2.Kapıyı seçtin</div>
+				<div id="d3">3.Kapıyı seçtin</div>
+				<div id="row2" class="row2">
+
+			<p class="spk1">Tamam, ardında keçi bulunan başka bir kapıyı görmen için açıyorum ve sana soruyorum;</p>
+			<p class="spk2">Seçtiğin kapıyı kalan diğer kapıyla değiştirmek istiyor musun?</p>
+
+				<div class="buttons">
+					<button id="btn-1">Evet</button>
+					<button id="btn-2">Hayır</button>
+				</div>
+			</div>
+		</div>
+
+		<main class="door-row">
+			<img id="door1" class="door" src="../img/door1.png" alt="door">
+			<img id="door2" class="door" src="../img/door1.png" alt="door">
+			<img id="door3" class="door" src="../img/door1.png" alt="door">
+		</main>
+	</div>
+
+	<div id="switchAndWin" class="result">
+		<p class="reslt">Tebrikler!</p>
+		<p>Seçtiğin kapıyı değiştirerek doğru seçim yaptın!</p>
+		<p>Kapını değiştirerek kazanma olasılığını %0.67'ye yükselttin.</p>
+
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">Daha fazla bilgi</a></button>
+			<button><a href="index.html">Yeniden oyna</a></button>
+		</div>
+	</div>
+
+	<div id="switchAndLose" class="result">
+		<p class="reslt">Kaybettin!</p>
+		<p>Kapını değiştirdiğinde kazanma şansın %67'idi, ancak yine de kaybettin.</p>
+		<p>Şansını yeniden dene</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">Daha fazla bilgi</a></button>
+			<button><a href="index.html">Yeniden oyna</a></button>
+		</div>
+	</div>
+	<div id="NoSwitchAndWin" class="result">
+		<p class="reslt">Tebrikler!</p>
+		<p>Çok şanslısın.</p>
+		<p>Kazanma olasılığın yalnızca %0.33'idi, çünkü seçtiğin kapıyı değiştirmedin, ancak yine de kazandın.</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">Daha fazla bilgi</a></button>
+			<button><a href="index.html">Yeniden oyna</a></button>
+		</div>
+	</div>
+	<div id="NoSwitchAndLose" class="result">
+		<p class="reslt">Kaybettin!</p>
+		<p>Kapını değiştirmediğin için kazanma şansın sadece %33'tü</p>
+		<p>Şansını yeniden dene</p>
+		<div class="links">
+			<button><a href="https://github.com/batihankota/yadgame" target="_blank">Daha fazla bilgi</a></button>
+			<button><a href="index.html">Yeniden oyna</a></button>
+		</div>
+	</div>
+	<script src="app.js" async defer></script>
+</body>
+</html>

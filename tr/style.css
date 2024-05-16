@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* Kullanıcı seçimini engelle */
+    -webkit-user-drag: none; /* Safari'de sürükle-bırak işlemini engelle */
+}
+
+body {
+    background-image: linear-gradient(#2A363B ,  #363636, #E84A5F ); /* Arka plan resmi */
+    min-height: 100vh; /* Ekran yüksekliğinin en az %100'ü kadar alan */
+    display: flex; /* Elemanları yatayda hizala */
+    align-items: center; /* Elemanları dikeyde hizala */
+    justify-content: center; /* Elemanları yatayda merkezle */
+    flex-direction: column; /* Elemanları dikeyde sırala */
+}
+
+header {
+    color: whitesmoke; /* Metin rengi */
+    height: 20vh; /* Başlık alanının yüksekliği */
+    font-family: 'Bangers', cursive; /* Yazı tipi */
+    display: flex; /* Elemanları yatayda hizala */
+    justify-content: center; /* Elemanları yatayda merkezle */
+    align-items: center; /* Elemanları dikeyde hizala */
+    font-size: 30px; /* Yazı boyutu */
+    text-align: center; /* Metni ortala */
+    user-select: none; /* Kullanıcı seçimini engelle */
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        font-size: 20px; /* Ekran küçüldüğünde yazı boyutunu düşür */
+    }
+}
+
+.rule-title {
+    font-family: 'Bangers', cursive; /* Yazı tipi */
+    font-size: 24px; /* Yazı boyutu */
+    font-weight: bold; /* Yazı kalınlığı */
+    margin-bottom: 10px; /* Alt boşluk */
+    color: crimson; /* Yazı rengi */
+    user-select: none; /* Kullanıcı seçimini engelle */
+}
+
+.rules {
+    width: 100%; /* Genişlik */
+    border-collapse: collapse; /* Kenarlık çizgilerini birleştir */
+    color: whitesmoke; /* Metin rengi */
+    user-select: none; /* Kullanıcı seçimini engelle */
+}
+
+.rule-number {
+    width: 20px; /* Genişlik */
+    text-align: center; /* Metni ortala */
+    color: crimson; /* Yazı rengi */
+    font-weight: bold; /* Yazı kalınlığı */
+    user-select: none; /* Kullanıcı seçimini engelle */
+}
+
+.rule {
+    padding-left: 10px; /* Sol iç boşluk */
+    font-size: large; /* Yazı boyutu */
+}
+
+.instructions {
+    height: auto; /* Yükseklik */
+    min-height: 15vh; /* En az yükseklik */
+    display: flex; /* Elemanları yatayda hizala */
+    justify-content: center; /* Elemanları yatayda merkezle */
+    align-items: center; /* Elemanları dikeyde hizala */
+    font-size: 30px; /* Yazı boyutu */
+    font-family: 'McLaren', cursive; /* Yazı tipi */
+    margin: 3vh 0; /* Kenar boşluğu */
+    color: whitesmoke; /* Metin rengi */
+    user-select: none; /* Kullanıcı seçimini engelle */
+}
+
+@media screen and (max-width: 700px) {
+    .instructions {
+        font-size: 20px; /* Ekran küçüldüğünde yazı boyutunu düşür */
+    }
+}
+
+.door-row {
+    display: flex; /* Elemanları yatayda hizala */
+    flex-wrap: wrap; /* Elemanların alt alta sıralanmasını sağla */
+    justify-content: center; /* Elemanları yatayda merkezle */
+    margin-top: 30px; /* Üst boşluk */
+}
+
+.door-row img {
+    width: 100%; /* Genişlik */
+    height: auto; /* Yükseklik */
+    margin: 10px; /* Kenar boşluğu */
+}
+
+.door {
+    width: calc((100% - 80px) / 3); /* Genişlik */
+    max-width: 200px; /* Maksimum genişlik */
+    height: auto; /* Yükseklik */
+    margin: 10px; /* Kenar boşluğu */
+    cursor: pointer; /* İmleci işaretçi olarak göster */
+    border: 0px solid #000; /* Kenarlık kalınlığı ve renk */
+    transition: transform 0.3s ease; /* Geçiş efekti */
+}
+
+@media screen and (max-width: 600px) {
+    .door {
+        width: calc(100% - 20px); /* Genişlik */
+        margin: 10px 0; /* Kenar boşluğu */
+    }
+}
+
+.door:hover {
+    transform: scale(1.05); /* Üzerine gelince büyüt */
+}
+
+.buttons {
+    width: auto; /* Genişlik */
+    height: auto; /* Yükseklik */
+    display: flex; /* Elemanları yatayda hizala */
+    justify-content: center; /* Elemanları yatayda merkezle */
+    align-items: center; /* Elemanları dikeyde hizala */
+    align-content: center; /* Elemanları dikeyde merkezle */
+    margin-top: 0.5em; /* Üst boşluk */
+}
+
+#switchAndWin {
+    color: whitesmoke; /* Yazı rengi */
+}
+
+#switchAndWin p.reslt {
+    color: greenyellow; /* Yazı rengi */
+}
+
+#NoSwitchAndWin {
+    color: whitesmoke; /* Yazı rengi */
+}
+
+#NoSwitchAndWin p.reslt {
+    color: greenyellow; /* Yazı rengi */
+}
+
+#NoSwitchAndLose {
+    color: whitesmoke; /* Yazı rengi */
+}
+
+#NoSwitchAndLose p.reslt {
+    color: crimson; /* Yazı rengi */
+}
+
+#switchAndLose {
+    color: whitesmoke; /* Yazı rengi */
+}
+
+#switchAndLose p.reslt {
+    color: crimson; /* Yazı rengi */
+}
+
+button {
+    padding: 10px 40px; /* Dolgu */
+    background-color: #000; /* Arka plan rengi */
+    border: none; /* Kenarlık */
+    border-radius: 50px; /* Kenar yuvarlaklığı */
+    color: #f5f5f5; /* Yazı rengi */
+    cursor: pointer; /* İmleci işaretçi olarak göster */
+    margin: 0 20px; /* Kenar boşluğu */
+    font-size: 18px; /* Yazı boyutu */
+    outline: none; /* Kenarlık vurgusu kaldır */
+    box-shadow: 0px 10px 13px -7px #000000, 7px 5px 15px 5px rgba(0, 0, 0, 0); /* Kutu gölgesi */
+}
+
+button:active {
+    transform: scale(0.9); /* Basıldığında küçült */
+}
+
+.result p {
+    font-size: 22px; /* Yazı boyutu */
+    line-height: 40px; /* Satır yüksekliği */
+    text-align: center; /* Metni ortala */
+}
+
+.result p:first-child {
+    font-family: 'Bangers', cursive; /* Yazı tipi */
+    letter-spacing: 2px; /* Harf aralığı */
+    text-transform: uppercase; /* Metni büyük harflere çevir */
+    font-size: 40px; /* Yazı boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
+}
+
+.links {
+    width: 100vw; /* Genişlik */
+    height: 10vw; /* Yükseklik */
+    text-align: center; /* Metni ortala */
+    margin: 40px 0; /* Kenar boşluğu */
+}
+
+.result a {
+    color: gray; /* Bağlantı rengi */
+    background-color: #000; /* Arka plan rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+}
+
+.result a:hover {
+    color: #f5f5f5; /* Bağlantı rengi */
+}
+
+#btn-1:hover,
+#btn-2:hover {
+    color: crimson; /* Yazı rengi */
+}
+
+#btn-1,
+#btn-2 {
+    color: #f5f5f5; /* Yazı rengi */
+}
+
+.spk1,
+.spk2 {
+    font-size: x-large; /* Yazı boyutu */
+    text-align: center; /* Metni ortala */
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        margin-top: 20px; /* Üst boşluk */
+        font-size: 20px; /* Yazı boyutu */
+        text-align: center; /* Metni ortala */
+    }
+
+    .spk1,
+    .spk2 {
+        font-size: large; /* Yazı boyutu */
+    }
+}
